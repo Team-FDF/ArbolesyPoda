@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Correo{% endblock %}
+
+{% block content %}
+    <section class="contact-section">
+        <h5>Envianos un correo</h2>
+        <form id="contact-form" method="post" action="">
+{% csrf_token %}
+            <input type="text" name="nombre" placeholder="Nombre Completo" required>
+            <input type="email" name="email" placeholder="Correo Electronico"required>
+            <textarea name="mensaje" placeholder="Mensaje" required></textarea>
+            <button type="submit">Cotizar</button>
+        </form>
+    </section>
+
+<span></span>
+<span></span>
+
+
+{% endblock %}
